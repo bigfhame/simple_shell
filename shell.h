@@ -73,7 +73,7 @@ struct liststr *next;
 
 typedef struct passinfo
 {
-char *arg
+char *arg;
 char **argv;
 char *path;
 int argc;
@@ -91,8 +91,7 @@ char **cmd_buf; /* pointer to cmd ; chain buffer, for memory mangement */
 int cmd_buf_type; /* CMD_type ||, &&, ; */
 int readfd;
 int histcount;
-}
-info_t;
+} info_t;
 
 #define INFO_INIT \
 {NULL, NULL, NULL, 0, 0, 0, 0, NULL, NULL, NULL, NULL, NULL, 0, 0, NULL, \
@@ -109,8 +108,7 @@ typedef struct builtin
 char *type;
 
 int (*func)(info_t *);
-}
-builtin_table;
+} builtin_table;
 
 /* toem_shloop.c */
 int hsh(info_t *, char **);
